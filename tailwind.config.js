@@ -21,6 +21,21 @@ export default {
         lightGrey: '#C8CCD8',
         veryLightGrey: '#EEEFF4',
         red: '#DF5656',
+      },
+      animation: {
+        scrollLeft: 'scrollLeft 3s ease 1 normal forwards'
+      },
+      keyframes: {
+        scrollLeft: {
+          '0%': {
+            opacity: 1,
+            transform: 'translateX(0)'
+          },
+          '100%': {
+            opacity: 0,
+            transform: 'translateX(-100%)'
+          }
+        }
       }
     },
   },
