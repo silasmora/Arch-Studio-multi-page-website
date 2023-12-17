@@ -31,7 +31,9 @@ const Footer = () => {
           <NavigationMenu isFooter={true}/>
         </div>
         <div className='z-10'>
-          <SeePortfolioButton text='See Our Portfolio'/>
+          <SeePortfolioButton 
+            onClick={() => navigate('/portfolio')} 
+            text='See Our Portfolio'/>
         </div>
         <div className='hidden md:block absolute bg-white right-0 w-[156px] h-[120px] lg:h-[200px] lg:w-[130px]'></div>
       </div>

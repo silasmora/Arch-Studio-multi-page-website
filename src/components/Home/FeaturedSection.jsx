@@ -1,6 +1,6 @@
 import React from 'react'
 import { tower228BMobile, delSolMobile, prototypeMobile, tower228BTablet, delSolTablet, prototypeTablet, tower228BDesktop, delSolDesktop, prototypeDesktop } from '../../../starter-code/assets/imageIndex'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { SeePortfolioButton } from '../SeePortfolioButton'
 
 const FeaturedSection = () => {
@@ -32,12 +32,16 @@ const FeaturedSection = () => {
   const isMobile = windowwidth <= 768
   const isTablet = windowwidth >= 768 && windowwidth <= 1024
 
+  const navigate = useNavigate()
+
   return (
     <div className='flex flex-col gap-[42px] px-8 pt-[73px] pb-[132px] md:px-0 md:pt-[207px] md:pb-[200px] md:gap-[86px] lg:gap-[65px]'>
       <div className='flex justify-between items-center'>
         <h1 className='text-veryDarkBlue text-[48px] font-bold leading-[52px] -tracking-[1.7px] md:text-[72px] md:leading-[64px] md:-tracking-[2px] '>Featured</h1>
         <div className='hidden md:block'>
-          <SeePortfolioButton text='See All'/>
+          <SeePortfolioButton 
+            onClick={() => navigate('/portfolio')} 
+            text='See All'/>
         </div>
       </div>
       <div className='flex flex-col gap-6 lg:flex-row lg:gap-[30px]'>
@@ -57,7 +61,10 @@ const FeaturedSection = () => {
       ))}
       </div>
       <div className='-mt-[18px] md:hidden'>
-        <SeePortfolioButton text='See All' isFeatured={true}/>
+        <SeePortfolioButton
+          onClick={() => navigate('/portfolio')} 
+          text='See All' 
+          isFeatured={true}/>
       </div>
     </div>
   )

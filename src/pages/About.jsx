@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className='relative md:py-0 md:px-[98px] md:pb-[200px] mx-auto max-w-[1400px] lg:pb-[160px] lg:px-[165px] flex flex-col gap-[76px] md:gap-[200px]
     
-    md:before:content-["about_us"] md:before:absolute md:before:text-[18px] md:before:text-lightGrey md:before:leading-6 md:before:tracking-[18px] md:before:font-medium md:before:uppercase md:before:rotate-90 md:before:top-[1.5%] md:before:-left-[1%] lg:before:-left-[1.9%] lg:before:top-[5.4%]
+    md:before:content-["about_us"] md:before:absolute md:before:text-[18px] md:before:text-lightGrey md:before:leading-6 md:before:tracking-[18px] md:before:font-medium md:before:uppercase md:before:rotate-90 md:before:top-[4.2%] md:before:-left-[7.5%] lg:before:-left-[2%] lg:before:top-[4%]
     '>
       <FirstSection 
         heading='About' 

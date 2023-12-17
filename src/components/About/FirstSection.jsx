@@ -19,7 +19,7 @@ const FirstSection = ({isContact, heading, subHeading, content}) => {
         <div className='relative bg-white h-[45px] w-[90%] md:h-[431px] md:flex md:flex-col md:justify-end md:pl-[59px] lg:w-[580px] lg:h-[503px] lg:pl-[140px]'>
           <div className={`hidden md:block absolute -top-[20%] right-0 text-[10rem] text-veryLightGrey font-bold leading-[200px] -tracking-[3px] lg:left-0 lg:text-[225px] lg:-top-[18%] ${isContact && 'lg:-ml-[170px]'}`}>{heading}</div>
           <div className='hidden flex-col gap-[38px] md:flex md:gap-[49px]'>
-            <div className='absolute top-[35%] border-t border-lightGrey w-[65px]'></div>
+            <div className='absolute top-[21%] border-t border-lightGrey w-[65px]'></div>
             <h1 className='text-5xl text-veryDarkBlue font-bold leading-[52px] -tracking-[1.2px] md:text-[72px] md:leading-[64px] md:-tracking-[2px]'>{subHeading}</h1>
             <p className='text-[18px] text-darkGray font-medium leading-6'>{content}</p>
           </div>

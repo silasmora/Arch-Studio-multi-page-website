@@ -41,7 +41,7 @@ const TheLeaders = () => {
   }
 
   return (
-    <div className='px-8 pt-8 md:px-0 flex flex-col gap-[55px] pb-[171px] md:pb-0 md:flex-row md:gap-[115px]'>
+    <div className='px-8 pt-8 md:px-0 flex flex-col gap-[55px] pb-[171px] md:pb-0 md:gap-[49px] lg:gap-[115px] lg:flex-row'>
       <h1 className='text-5xl text-veryDarkBlue font-bold leading-[52px] -tracking-[1.2px] w-1/2 md:text-[72px] md:leading-[64px] md:-tracking-[2px] lg:w-1/4'>The Leaders</h1>
       <div className='grid md:grid-cols-2 gap-[79px] md:gap-x-[11px] md:gap-y-[103px] lg:gap-x-[30px] lg:gap-y-[63px]'>
         {leadersList.map((leader, idx) => (
@@ -51,7 +51,7 @@ const TheLeaders = () => {
               onMouseLeave={() => handleMouseLeave(idx)}
               className={`relative cursor-pointer`}
 >
-              <img className='object-cover object-center' src={leader.img} alt="leader-pic" />
+              <img className='w-full object-cover object-center' src={leader.img} alt="leader-pic" />
               <div className={`absolute inset-0 w-full  ${isHover[idx] ? 'bg-black/50' : 'bg-black/10'}`}></div>
               {isHover[idx] && (
                 <div className='absolute top-[42%] right-[35%] flex items-center gap-8'>

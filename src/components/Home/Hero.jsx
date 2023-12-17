@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { SeePortfolioButton } from '../SeePortfolioButton'
+import { useNavigate } from 'react-router-dom'
 
 const Hero = ({imageList, currentImageIndex, setCurrentImageIndex}) => {
 
@@ -18,6 +19,8 @@ const Hero = ({imageList, currentImageIndex, setCurrentImageIndex}) => {
       clearInterval(intervalId)
     }
   }, [])
+
+  const navigate = useNavigate()
 
   return (
     <div className='relative px-8 pt-[116px] pb-[110px] md:px-[58px] md:pt-[186px] md:pb-[179px] lg:px-[190px] duration-300 overflow-x-hidden'>      
@@ -42,7 +45,9 @@ const Hero = ({imageList, currentImageIndex, setCurrentImageIndex}) => {
         a statement of bold, modern architecture.</p>
       </div>
       <div className='relative pt-[83px] md:pt-10'>
-        <SeePortfolioButton text='See Our Portfolio'/>
+        <SeePortfolioButton
+          onClick={() => navigate('/portfolio')} 
+          text='See Our Portfolio'/>
       </div>
     </div>
   )
